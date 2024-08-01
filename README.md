@@ -13,7 +13,6 @@ Key Features:
 React Hooks: Utilized hooks like useState and useEffect for efficient state management.
 Material UI: Implemented Material UI components to achieve a sleek and modern look.
 Responsive Design: Ensured the app is fully responsive, providing a seamless experience on both desktop and mobile devices.
-Check out the video demonstration of my project, and feel free to share your thoughts or feedback. I’m always eager to learn and improve!
 
 Thank you for taking the time to view my work! 😊
 
