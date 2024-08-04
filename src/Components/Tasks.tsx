@@ -5,23 +5,21 @@ import { Checkbox, IconButton, TextField } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { useState } from "react";
 
-// Correct the TaskProps interface
 interface TaskProps {
   updateTask(id: string, newTitle: string): void;
   taskFinish(id: string, arg1: boolean): void;
   title: string;
-  completed: boolean; // Corrected the type here
+  completed: boolean; 
   id: string;
   removeTask: (id: string) => void;
 }
 
-// Correct the spelling to TaskContainer
 const TaskContainer = styled("div")({
   paddingRight: '8px',
   paddingLeft: "10px",
   margin: '7px',
  
-  background: 'rgba(255, 255, 255, 0.2)', // Corrected the background opacity
+  background: 'rgba(255, 255, 255, 0.2)', 
   borderRadius: '50px',
   display: 'flex',
   flexDirection: 'row',
@@ -30,8 +28,8 @@ const TaskContainer = styled("div")({
 });
 
 function Task(props: TaskProps) {
-  const [isEditing, setIsEditing] = useState(false); // Track editing state
-  const [newTitle, setNewTitle] = useState(props.title); // Track new title value
+  const [isEditing, setIsEditing] = useState(false); 
+  const [newTitle, setNewTitle] = useState(props.title); 
 
   // Function to toggle edit mode
   const handleEditClick = () => {
@@ -60,10 +58,10 @@ function Task(props: TaskProps) {
           <TextField
             value={newTitle}
             onChange={handleInputChange}
-            onBlur={handleSaveClick} // Save changes when input loses focus
+            onBlur={handleSaveClick} 
             onKeyPress={(event) => {
               if (event.key === 'Enter') {
-                handleSaveClick(); // Save changes on Enter key press
+                handleSaveClick(); 
               }
             }}
             autoFocus
@@ -72,7 +70,7 @@ function Task(props: TaskProps) {
             sx={{ backgroundColor: 'white', background: "#e6e6ff" }}
           />
         ) : (
-          props.title // Display title normally when not editing
+          props.title 
         )}
       </div>
       <div>
