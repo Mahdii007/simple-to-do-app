@@ -1,6 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { amber } from '@mui/material/colors'; // Import the amber color palette
-
+import { amber } from '@mui/material/colors';
 interface HeaderProps{
     userName : string;
 }
